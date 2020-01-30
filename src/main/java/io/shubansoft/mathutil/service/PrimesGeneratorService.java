@@ -83,7 +83,7 @@ public class PrimesGeneratorService {
                     this.primesCache.setInitial(limit);
 
                     if(start >= 0)
-                        return Primes.builder().initial(limit).primes(subsetPrimes).build();
+                        return Primes.builder().initial(limit).primes(Sets.newTreeSet(subsetPrimes)).build();
                     else
                         return primesCache;
                 }
